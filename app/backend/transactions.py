@@ -3,3 +3,5 @@
 #
 ## Issues transactions and actions in the DB
 ## Also touches the locations table
+
+from app.backend import sql_query

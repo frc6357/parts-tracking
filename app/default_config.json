@@ -1,0 +1,53 @@
+{
+    "production": {
+        "db_info": {
+            "name": "",
+            "user": "",
+            "password": "",
+            "host": "",
+            "port": ""
+        }
+
+    },
+
+    "dev": {
+        "db_info": {
+            "name": "",
+            "user": "",
+            "password": "",
+            "host": "",
+            "port": ""
+        }
+
+    },
+
+    "test": {
+        "db_info": {
+            "name": "",
+            "user": "",
+            "password": "",
+            "host": "",
+            "port": ""
+        }
+
+    },
+
+    "local": {
+        "db_info": {
+            "name": "postgres",
+            "user": "parts_user",
+            "password": "letmein",
+            "host": "localhost",
+            "port": "5432"
+        },
+        "server_info" : {
+            "fqdn" : "",
+            "port" : 5000,
+            "debug" : true
+        },
+        "options" : {
+
+        }
+
+    }
+}
