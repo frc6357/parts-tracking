@@ -1,0 +1,14 @@
+<html>
+    <head>
+        {% if title %}
+        <title>Part Tracker | Location {{ title }}</title>
+        {% else %}
+        <title>Part Tracker</title>
+        {% endif %}
+    </head>
+    <body>
+        {% for location in locations %}
+        <div><p>{{ location.name }} <b>{{ location.description }}</b></p></div>
+        {% endfor %}
+    </body>
+</html>

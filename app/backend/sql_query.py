@@ -30,16 +30,14 @@ def execute_query(query, args):
     conn = conn_pool.getconn()
     ## get cursor
     cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-    ## Pass the query
-    print(query)
-    print(args)
-    #try:
-    cur.execute(query, args)
-    #except:
-    #    conn.rollback()
-    #    cur.close()
-    #    conn_pool.putconn(conn)
-    #    return {'status': 'exception', 'info': str(sys.exc_info()[0])}
+    ## Pass the query)
+    try:
+        cur.execute(query, args)
+    except:
+        conn.rollback()
+        cur.close()
+        conn_pool.putconn(conn)
+        return {'status': 'exception', 'info': str(sys.exc_info()[0])}
     ## return the result
     result = cur.fetchall()
     ## here's a place to log activity

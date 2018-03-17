@@ -3,7 +3,7 @@
 #
 ## Needs to add, remove, and modify locations
 
-from app.backend import sql_query
+from backend import sql_query
 
 def add_location(name, description):
     return sql_query.execute_query('INSERT INTO locations (name, description) VALUES (%s, %s);' , (name, description))
